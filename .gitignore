@@ -1,0 +1,8 @@
+
+build
+
+src/firebase.js
+node_modules
+firestore.rules
+
+database.rules.json
