@@ -16,11 +16,15 @@ export default class Task extends React.Component {
         }
 
         return (
-            <div className="task" onClick={() => updateTask(listId, taskId, { checked: !task.checked })}>
-                {task.checked ?
-                    <i className="fa fa-check-circle hover-scale" /> :
-                    <i className="fa fa-circle-o hover-scale" />}
-                <span style={{ paddingLeft: '1rem', textDecoration: task.checked ? 'line-through' : 'none' }}>{task.task}</span>
+            <div className="task">
+                <span className="task-text" onClick={() => updateTask(listId, taskId, { checked: !task.checked })}>
+                    {task.checked ?
+                        <i className="fa fa-check-circle hover-scale" /> :
+                        <i className="fa fa-circle-o hover-scale" />}
+                    <span style={{ paddingLeft: '1rem', textDecoration: task.checked ? 'line-through' : 'none' }}>
+                        {task.task}
+                    </span>
+                </span>
             </div>
         )
     }
